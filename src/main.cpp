@@ -49,7 +49,7 @@ void loop()
   tft.fillRect(10, 30, 320, 240, TFT_BLACK);
   tft.drawString(String(environment.getTemperature(TEMP_C)-3, 1) + "C", 10, 30, 1);
   tft.drawString(String(environment.getHumidity(), 1) + "%", 10, 50, 1);
-  tft.drawString(String(uvIntensity, 1) + "mw/cm2 - UVI: " + String(abs(uvIntensity / 400), 0), 10, 70, 1);
+  tft.drawString(String(uvIntensity, 1) + "mw/cm2 - UVI: " + String(abs(uvIntensity * 0.0004), 0), 10, 70, 1);
   tft.drawString(String(environment.getLuminousIntensity(), 1) + "lx", 10, 90, 1);
   tft.drawString(String(environment.getAtmospherePressure(HPA)) + "hpa", 10, 110, 1);
   delay(2000);
